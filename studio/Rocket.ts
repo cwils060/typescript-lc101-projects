@@ -1,6 +1,8 @@
-import { Cargo } from "./studio/Cargo";
+import { Cargo } from "./Cargo";
+import { Payload } from "./Payload";
+import { Astronaut } from "./Astronaut";
 
-class Rocket {
+export class Rocket {
     name: string;
     totalCapacityKg: number; 
     cargoItems: Cargo[]=[]; 
@@ -12,7 +14,15 @@ class Rocket {
     }
     sumMass(items:Payload[]): number{
         let sum:number= 0;
-        for (let i=0; i<items.length; i++)
-        //(for items in items)
+        for (let i=0; i<items.length; i++){
+            sum+=items[i].massKg;
+        }
+        return sum;
     };
+    currentMassKg(sum): number{
+
+        // return this.sumMass
+        // this.astronauts
+    }
+
 }
