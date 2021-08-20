@@ -1,4 +1,4 @@
-import { Payload } from "./studio/Payload";
+import { Payload } from "./Payload";
 
 class Astronaut implements Payload {
     massKg: number;
